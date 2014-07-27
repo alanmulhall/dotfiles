@@ -115,3 +115,13 @@ nmap <leader>gb :Gblame<cr>
 
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
+
+" Syntastic
+
+" let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1

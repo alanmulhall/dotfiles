@@ -1,11 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/alan.mulhall/temp'
-let g:netrw_dirhist_2='/Users/alan.mulhall/dotfiles/.vim/bundle'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/alan.mulhall/Sites/nfl-now-desktop'
+let g:netrw_dirhist_2='/Users/alan.mulhall'
 let g:netrw_dirhist_3='/Users/alan.mulhall/Sites/nfl-now-desktop'
-let g:netrw_dirhist_4='/Users/alan.mulhall/Workspace/picasso-pad-server'
-let g:netrw_dirhist_5='/Users/alan.mulhall/Workspace/picasso-pad-client'
-let g:netrw_dirhist_6='/Users/alan.mulhall/Workspace/picasso-pad-server'
-let g:netrw_dirhist_7='/Users/alan.mulhall/Workspace/picasso-pad-client'
-let g:netrw_dirhist_8='/Users/alan.mulhall/Workspace/picasso-pad-server'
-let g:netrw_dirhist_9='/Users/alan.mulhall/Sites/vindicia-web-app'
+let g:netrw_dirhist_4='/Users/alan.mulhall/dotfiles/.vim/bundle'
+let g:netrw_dirhist_5='/Users/alan.mulhall/Sites/nfl-now-desktop'
