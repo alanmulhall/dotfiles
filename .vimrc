@@ -125,3 +125,17 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+
+" Searching                                                                                                                                   │ 130 nmap <leader><leader> /<c-r>=expand("<cword>")<cr><cr>N
+nmap <leader><leader> /<c-r>=expand("<cword>")<cr><cr>N                                                                                       │ 131 nmap <leader>f :Ack <c-r>=expand("<cword>")<cr>
+nmap <leader>f :Ack <c-r>=expand("<cword>")<cr>                                                                                               │ 132 nmap <leader>d :Ack "def (self\.)?<c-r>=expand("<cword>"
+nmap <leader>d :Ack "def (self\.)?<c-r>=expand("<cword>")<cr>"                                                                                │     )<cr>"
+                                                                                                                                              │ 133
+function! ReplaceIt()                                                                                                                         │ 134 function! ReplaceIt()
+  call inputsave()                                                                                                                            │ 135   call inputsave()
+  let replacement = input('Enter replacement:')                                                                                               │ 136   let replacement = input('Enter replacement:')
+  call inputrestore()                                                                                                                         │ 137   call inputrestore()
+  execute '%s/'.expand('<cword>').'/'.replacement.'/g'                                                                                        │ 138   execute '%s/'.expand('<cword>').'/'.replacement.'/g'
+endfunction                                                                                                                                   │ 139 endfunction
+                                                                                                                                              │ 140
+nmap <leader>s :call ReplaceIt()<cr>
