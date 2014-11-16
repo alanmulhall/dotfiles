@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="random"
-ZSH_THEME="mulhall"
+#ZSH_THEME="mulhall"
 
 # use the homebrew version of ctags
 alias ctags="`brew --prefix`/bin/ctags"
@@ -55,7 +55,7 @@ export EDITOR='vim'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git nvm rvm ruby gem node npm)
+plugins=(git rvm ruby gem node npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,7 +80,8 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-[ -s "/Users/alan.mulhall/.nvm/nvm.sh" ] && . "/Users/alan.mulhall/.nvm/nvm.sh" # This loads nvm
+#loads NVM
+#[ -s "/Users/alan.mulhall/.nvm/nvm.sh" ] && . "/Users/alan.mulhall/.nvm/nvm.sh" # This loads nvm
 
 
 #Added by alan
@@ -119,3 +120,8 @@ alias cdn='cd ~/Sites/nfl-now-desktop'
 alias ns='npm start'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH="$PATH:$HOME/vert.x-2.1/bin" # add vert.x to PATH
+alias mysql=/usr/local/mysql/bin/mysql
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+eval "$(nodenv init -)"

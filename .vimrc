@@ -125,3 +125,32 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+
+" Searching
+nmap <leader><leader> /<c-r>=expand("<cword>")<cr><cr>N
+nmap <leader>f :Ack <c-r>=expand("<cword>")<cr>
+nmap <leader>d :Ack "def (self\.)?<c-r>=expand("<cword>")<cr>"
+
+function! ReplaceIt()
+  call inputsave()
+  let replacement = input('Enter replacement:')
+  call inputrestore()
+  execute '%s/'.expand('<cword>').'/'.replacement.'/g'
+endfunction
+
+nmap <leader>s :call ReplaceIt()<cr>
+
+" forces Glog to open in quickfix window plus all grep commands
+autocmd QuickFixCmdPost *grep* cwindow
+
+
+" Map Emmet to tab in html files
+function! s:zen_html_tab()
+  let line = getline('.')
+  if match(line, '<.*>') >= 0
+    return "\<c-y>n"
+  endif
+  return "\<c-y>,"
+endfunction
+
+autocmd FileType html imap <buffer><expr><tab> <sid>zen_html_tab()
