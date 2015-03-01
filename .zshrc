@@ -125,3 +125,6 @@ export PATH="$PATH:$HOME/vert.x-2.1/bin" # add vert.x to PATH
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 eval "$(nodenv init -)"
+
+#make sure terminal uses mvim for vim command
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
